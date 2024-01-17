@@ -4,7 +4,6 @@ export const getPosts = async (req,res)=>{
     try {
         const postMessage = await PostMessage.find();
         res.status(200).json(postMessage);
-        res.send("Successfully started");
     } catch (error) {
         res.status(404).json({message : error.message});
     }
